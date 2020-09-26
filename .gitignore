@@ -14,16 +14,6 @@ api/rulesets/.php_cs.cache
 /api/vendor/
 ###< symfony/framework-bundle ###
 
-/api/docs/haproxy/socket.elite.local.pem
-/api/docs/haproxy/install.pem
-/api/docs/haproxy/nginx+1-key.pem
-/api/docs/haproxy/nginx+1.pem
-/api/docs/haproxy/nginx.pem
-/api/docs/haproxy/install-key.pem
-/api/public/private/
-/api/public/public/
-/api/public/export/
-
 ###> friendsofphp/php-cs-fixer ###
 /api/.php_cs
 /api/.php_cs.cache

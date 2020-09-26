@@ -13,9 +13,9 @@
 #### Code architecture
   * Class naming concise and intuitive. Duplicate names are ok. Differentiation is done by namespaces. 
   * Slim Classes - One public method per class. Private methods are ok.
-  * For the new API endpoints, use actions instead of controllers. Examples of [AbstractAction](api/src/Utils/AbstractAction.php) implementation is located in [Meeting component](api/src/Meetings/Application/Action/MeetingForm/CreateMeetingAction.php). Eventually, actions will replace controllers.
+  * For the new API endpoints, use actions instead of controllers. Examples of [AbstractAction](api/src/Utils/AbstractAction.php).
   * Code is structured in folders that mimic GUI section that uses them. See [example](api/docs/code-architecture-example.md).
-  * Use Repository Interface instead of injecting Doctrine implementations. Refactoring of existing implementations is in progress.
+  * Use Repository Interface instead of injecting Doctrine implementations.
   * Repositories should contain only basic methods (findById, findBy, save). For more complex queries use QueryObjects.
 
 #### Routes  
@@ -44,6 +44,4 @@
   * [phplock](https://github.com/sebastianbergmann/phploc)
 
 ## Server configuration
-  * [nginx client](api/docs/configuration/default.conf)
-  * [nginx api](api/docs/configuration/api.conf)
   * [php.ini](api/docs/configuration/php.ini)

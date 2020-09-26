@@ -1,5 +1,5 @@
 # Project setup (development)
-In order to successfully deploy the ELITE One Platform project, following actions are needed:
+In order to successfully deploy the project, following actions are needed:
   * [Install additional packages (development)](#package-install-development)
   * [Deploy code (development)](#code-deployment-development)
   * [Additional project setup (development)](#additional-project-setup-development)
@@ -16,10 +16,10 @@ In order to successfully deploy the ELITE One Platform project, following action
     * `sudo chmod 777 api/public/ -R`
     * `sudo chown $USER:$USER api/public/ -R`
 
-Replace `${PROJECT_ROOT}` with the path to the ELITE One Platform project
+Replace `${PROJECT_ROOT}` with the path to the project
   
 ## Project environment config file setup
-   * ELITE One Platform has two environment config files
+   * This project has two environment config files
    * Setup `client/.env` from `client/.env.dist` and `api/.env` from `api/.env.dist`.` 
    * Make the following changes in `client/.env` file:
        * MESSAGING_WEBSOCKET_URL=https://socket.elite.local

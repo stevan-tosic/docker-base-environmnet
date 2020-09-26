@@ -16,8 +16,8 @@
 127.0.0.1 redis-client
 127.0.0.1 db
 127.0.0.1 elasticsearch
-127.0.0.1 api.elite.local
-127.0.0.1 platform.elite.local
+127.0.0.1 api.local
+127.0.0.1 platform.local
 ```
   * Add commonly used scripts from [bash-scrips](api/docs/scripts/bash-scripts.sh) to your ~/.bashrc file (set PROJECT_PATH to your project path), and after saving file run
     * `source ~/.bashrc` - to load them into the current user session
@@ -49,9 +49,9 @@
     
 ###### The following services should be available:
   * client:
-    * [http://platform.elite.local/admin](http://platform.elite.local/admin)
+    * [http://localhost:12010/](http://localhost:12010/)
   * api/nginx:
-    * [http://localhost/api](http://api.elite.local/api)
+    * [http://localhost:12020/](http://localhost:12020/)
   * redis:
     * `redis-cli -p 6381`
     * `redis-cli -p 6382`

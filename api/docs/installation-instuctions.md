@@ -14,7 +14,7 @@ On **dev** environment, build code for production in the following way
   * `cd ${PROJECT_ROOT}/client && npm run client:build`
   * `cd ${PROJECT_ROOT}/api && composer deploy`
 
-Replace `${PROJECT_ROOT}` with the path to the ELITE One Platform project
+Replace `${PROJECT_ROOT}` with the path to the project
 
 ### @devops Stage and Prod environments
 On **stage** and **prod** environments, code is deployed in the following way
@@ -32,7 +32,7 @@ Copy `api/websocket/websocket.ini` to server `/etc/supervisord.d/websocket.ini` 
 Configure file `/etc/supervisord.d/websocket.ini` with your environment settings. 
 
 ### Project environment config file setup
-ELITE One Platform has two environment config files
+This project has two environment config files
 
 ## OAuth clients setup
   * `composer create-oauth-clients -d ${PROJECT_PATH}/api`
