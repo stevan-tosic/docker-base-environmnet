@@ -2,6 +2,7 @@
 
 namespace App\Utils;
 
+use App\Utils\Exception\ExceptionHandler;
 use App\Utils\Logger\Logger;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -27,21 +28,27 @@ class AbstractAction
     /** @var TokenStorageInterface */
     protected $tokenStorage;
 
+    /** @var ExceptionHandler */
+    protected $exceptionHandler;
+
     /**
      * AbstractAction constructor.
      *
      * @param Logger                        $logger
      * @param AuthorizationCheckerInterface $authorizationChecker
      * @param TokenStorageInterface         $tokenStorage
+     * @param ExceptionHandler              $exceptionHandler
      */
     public function __construct(
         Logger $logger,
         AuthorizationCheckerInterface $authorizationChecker,
-        TokenStorageInterface $tokenStorage
+        TokenStorageInterface $tokenStorage,
+        ExceptionHandler $exceptionHandler
     ) {
         $this->logger               = $logger;
         $this->authorizationChecker = $authorizationChecker;
         $this->tokenStorage         = $tokenStorage;
+        $this->exceptionHandler     = $exceptionHandler;
     }
 
     /**
