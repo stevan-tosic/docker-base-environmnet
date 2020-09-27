@@ -31,21 +31,24 @@ class ExceptionHandler
         switch (get_class($exception)) {
             case AccessDeniedException::class:
                 $type = 'warning';
+                $message = 'error.forbidden';
                 $status = JsonResponse::HTTP_FORBIDDEN;
                 break;
 
             case NotFoundHttpException::class:
                 $type = 'info';
+                $message = 'error.notFound';
                 $status = JsonResponse::HTTP_NOT_FOUND;
                 break;
 
             default:
                 $type = 'error';
+                $message = 'error.unexpectedError';
                 $status = JsonResponse::HTTP_INTERNAL_SERVER_ERROR;
         }
 
         $this->logger->log($exception, $type);
 
-        return new JsonResponse('error.forbidden', $status);
+        return new JsonResponse($message, $status);
     }
 }
