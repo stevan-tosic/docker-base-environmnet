@@ -53,10 +53,10 @@ install:
 	yes | cp -rf api/.env.dist api/.env
 	yes | cp -rf api/public/.htaccess.dist api/public/.htaccess
 	yes | cp -rf client/.env.dist client/.env
+	@docker-compose up -d
 	$(call colorecho, "\nCreating user with superadmin role")
 	@docker exec php bin/console create:user
 	$(call colorecho, "\nSetting up xdebug alias for proxy")
-	@docker-compose up -d
 
 PHONY += ps
 ps:			## Docker containers process status
