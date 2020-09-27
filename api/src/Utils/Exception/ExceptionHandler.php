@@ -28,7 +28,7 @@ class ExceptionHandler
      */
     public function execute(\Throwable $exception): JsonResponse
     {
-        switch (get_class($exception)) {
+        switch (\get_class($exception)) {
             case AccessDeniedException::class:
                 $type = 'warning';
                 $message = 'error.forbidden';

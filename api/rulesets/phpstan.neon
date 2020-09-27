@@ -12,6 +12,7 @@ parameters:
     symfony:
         container_xml_path: %rootDir%/../../../var/containerDump/appDevDebugProjectContainer.xml
     reportUnmatchedIgnoredErrors: false
+    checkMissingIterableValueType: false
     ignoreErrors:
         - '#Function locale_accept_from_http not found.#' ## MacOS :(
         - '#PHPDoc tag @throws with type [a-zA-Z0-9|\\_]+ is not subtype of Throwable#'
@@ -22,3 +23,4 @@ parameters:
         - '#Service "knp_paginator" is not registered in the container#'
         - '#Service "cache.app" is not registered in the container#'
         - '#Possibly invalid array key type array|string|null#' ## https://github.com/phpstan/phpstan/issues/1932
+        - '#Consider adding something like array<Foo> to the PHPDoc.#'
